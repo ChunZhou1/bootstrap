@@ -390,11 +390,45 @@ export function Flex_1() {
 export function Flex_align() {
   return (
     <div className="d-flex bd-highlight">
-      <div className="p-2 flex-fill bd-highlight border">
+      <div className="p-2 flex-fill bd-highlight border bg-info">
         Flex item with a lot of content
       </div>
       <div className="p-2 flex-fill bd-highlight border">Flex item</div>
       <div className="p-2 flex-fill bd-highlight border">Flex item</div>
+    </div>
+  );
+}
+
+export function Position() {
+  return (
+    <div className="container">
+      <button type="button" className="btn btn-primary position-relative mx-5">
+        Mails
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+          +99 <span className="visually-hidden">unread messages</span>
+        </span>
+      </button>
+
+      <button type="button" className="btn btn-dark position-relative  mx-5">
+        Marker
+        <svg
+          width="1em"
+          height="1em"
+          viewBox="0 0 16 16"
+          className="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"
+          fill="#212529"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+        </svg>
+      </button>
+
+      <button type="button" className="btn btn-primary position-relative mx-5">
+        Alerts
+        <span className="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2">
+          <span className="visually-hidden">unread messages</span>
+        </span>
+      </button>
     </div>
   );
 }
