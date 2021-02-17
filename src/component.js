@@ -369,3 +369,32 @@ export function Form_horizonta() {
     </div>
   );
 }
+
+export function Flex_1() {
+  return (
+    <div className="container">
+      <div className="d-flex flex-column border bd-highlight mt-3">
+        <div className="p-2 bd-highlight">Flex item 1</div>
+        <div className="p-2 bd-highlight">Flex item 2</div>
+        <div className="p-2 bd-highlight">Flex item 3</div>
+      </div>
+      <div className="d-flex flex-column-reverse bd-highlight border">
+        <div className="p-2 bd-highlight">Flex item 1</div>
+        <div className="p-2 bd-highlight">Flex item 2</div>
+        <div className="p-2 bd-highlight">Flex item 3</div>
+      </div>
+    </div>
+  );
+}
+
+export function Flex_align() {
+  return (
+    <div className="d-flex bd-highlight">
+      <div className="p-2 flex-fill bd-highlight border">
+        Flex item with a lot of content
+      </div>
+      <div className="p-2 flex-fill bd-highlight border">Flex item</div>
+      <div className="p-2 flex-fill bd-highlight border">Flex item</div>
+    </div>
+  );
+}

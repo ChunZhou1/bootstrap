@@ -10,6 +10,8 @@ import { Gird_v } from "./component";
 import { Gird_break } from "./component";
 import { Gutter } from "./component";
 import { Gutter_v } from "./component";
+import { Flex_1 } from "./component";
+import { Flex_align } from "./component";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
       <br />
       <br />
       <Gutter_v />
+      <Flex_1 />
+      <Flex_align />
     </div>
   );
 }
