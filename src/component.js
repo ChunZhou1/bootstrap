@@ -2,7 +2,7 @@ import React from "react";
 import "./bootstrap/js/bootstrap.bundle.min.js";
 import "./bootstrap/css/bootstrap.min.css";
 
-/** */
+/* */
 
 function Gird1() {
   return (
