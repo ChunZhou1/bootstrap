@@ -13,6 +13,7 @@ import { Gutter_v } from "./component";
 import { Flex_1 } from "./component";
 import { Flex_align } from "./component";
 import { Position } from "./component";
+import { Table_1 } from "./component";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Flex_1 />
       <Flex_align />
       <Position />
+      <Table_1 />
     </div>
   );
 }
