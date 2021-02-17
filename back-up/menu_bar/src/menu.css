@@ -1,0 +1,32 @@
+.main_menu,
+.sub_menu {
+  list-style-type: none;
+}
+
+.not_display {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+.sub_menu {
+  padding-left: 0px;
+}
+
+.menu_list {
+  float: left;
+}
+
+.Single_List_a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 50px;
+  color: black;
+  text-align: center;
+}
+.header {
+  width: 50%;
+  height: 40px;
+}
