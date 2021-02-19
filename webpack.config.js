@@ -41,6 +41,13 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/, // 要加载的文件后缀，无引号
+        use: [
+          // 使用的加载器
+          "file-loader"
+        ]
       }
     ]
   },

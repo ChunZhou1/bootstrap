@@ -17,6 +17,7 @@
     "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.2",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.1.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.21.2",
@@ -24,6 +25,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "bootstrap": "^5.0.0-beta2",
     "prop-types": "^15.7.2",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5"

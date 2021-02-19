@@ -1,11 +1,12 @@
 import React from "react";
 
+import Component_all from "./component_1";
 import Form_control_all from "./form";
 
 function App() {
   return (
     <div className="container">
-      <Form_control_all />
+      <Component_all />
     </div>
   );
 }
