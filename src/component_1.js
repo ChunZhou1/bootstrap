@@ -1,6 +1,10 @@
 import React from "react";
 
+/*import bootstrap from "bootstrap";*/
+const bootstrap = require("bootstrap");
+
 import "./bootstrap/js/bootstrap.bundle.js";
+import "./bootstrap/css/bootstrap.min.css";
 
 import P1 from "../pic/p1.jpg";
 import P2 from "../pic/p2.jpg";
@@ -384,4 +388,102 @@ function Carousel() {
       </div>
     </div>
   );
+}
+export class Carousel_1 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.carousel = React.createRef();
+    this.carousel_1 = null;
+
+    this.handle_action = this.handle_action.bind(this);
+  }
+
+  handle_action() {
+    if (this.props.action == "pause") {
+      console.log("OK pause!!!!!");
+      this.carousel_1.pause();
+    }
+  }
+
+  componentDidMount() {
+    if (this.carousel_1 == null) {
+      this.carousel_1 = new bootstrap.Carousel(this.carousel.current);
+
+      this.carousel.current.addEventListener(
+        "slide.bs.carousel",
+        this.handle_action
+      );
+    }
+  }
+
+  render() {
+    return (
+      <div className="mt-3">
+        <div
+          id="carouselExampleInterval"
+          className="carousel carousel-dark slide"
+          data-bs-ride="carousel"
+          ref={this.carousel}
+        >
+          <div className="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide-to="0"
+              className="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div className="carousel-inner">
+            <div className="carousel-item active" data-bs-interval="3000">
+              <img src={P1} className="d-block w-100" alt="..." />
+            </div>
+            <div className="carousel-item" data-bs-interval="3000">
+              <img src={P2} className="d-block w-100" alt="..." />
+            </div>
+            <div className="carousel-item" data-bs-interval="3000">
+              <img src={P3} className="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    );
+  }
 }
