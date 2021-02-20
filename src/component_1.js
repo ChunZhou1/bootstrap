@@ -1,9 +1,8 @@
 import React from "react";
 
-/*import bootstrap from "bootstrap";*/
 const bootstrap = require("bootstrap");
 
-import "./bootstrap/js/bootstrap.bundle.js";
+/*import "./bootstrap/js/bootstrap.bundle.js";*/
 import "./bootstrap/css/bootstrap.min.css";
 
 import P1 from "../pic/p1.jpg";
@@ -31,15 +30,13 @@ function Component_all() {
       </div>
 
       <div className="mt-3">
-        <Carousel />
+        <Collapse />
       </div>
     </div>
   );
 }
 
 export default Component_all;
-
-// <h2 className="accordion-header collapsed" id="headingOne"> default not collapsed ,please add collapsed
 
 function Accordion() {
   return (
@@ -410,7 +407,7 @@ export class Carousel_1 extends React.Component {
       this.carousel_1 = new bootstrap.Carousel(this.carousel.current);
 
       this.carousel.current.addEventListener(
-        "slide.bs.carousel",
+        "slid.bs.carousel",
         this.handle_action
       );
     }
@@ -482,6 +479,41 @@ export class Carousel_1 extends React.Component {
             ></span>
             <span className="visually-hidden">Next</span>
           </button>
+        </div>
+      </div>
+    );
+  }
+}
+
+class Collapse extends React.Component {
+  render() {
+    return (
+      <div className="col-6">
+        <p>
+          <a
+            className="btn btn-primary me-3"
+            data-bs-toggle="collapse"
+            href="#collapseExample1"
+            role="button"
+            aria-expanded="false"
+          >
+            Link with href
+          </a>
+          <button
+            className="btn btn-primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample2"
+            aria-expanded="false"
+          >
+            Button with data-bs-target
+          </button>
+        </p>
+        <div className="collapse" id="collapseExample1">
+          <div className="card card-body">collapseExample1</div>
+        </div>
+        <div className="collapse" id="collapseExample2">
+          <div className="card card-body">collapseExample2</div>
         </div>
       </div>
     );

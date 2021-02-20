@@ -7,7 +7,7 @@ import Carousel_manager from "./Carousel";
 function App() {
   return (
     <div className="container">
-      <Carousel_manager />
+      <Component_all />
     </div>
   );
 }
